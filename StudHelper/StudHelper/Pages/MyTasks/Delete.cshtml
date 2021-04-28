@@ -25,47 +25,12 @@
             @Html.DisplayFor(model => model.Task.MaxPrice)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Task.Status)
+            Employee
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Task.Status)
+            @Html.DisplayFor(model => model.Task.Employee.UserName)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Task.EmployerReviewDescr)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Task.EmployerReviewDescr)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Task.EmployeeReviewDescr)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Task.EmployeeReviewDescr)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Task.EmployerRating)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Task.EmployerRating)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Task.EmployeeRating)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Task.EmployeeRating)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Task.Employee)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Task.Employee.Id)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Task.Employer)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Task.Employer.Id)
-        </dd>
+       
     </dl>
     
     <form method="post">

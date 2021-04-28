@@ -1,5 +1,6 @@
 ﻿@page
 @model StudHelper.Pages.MyTasks.EditModel
+
 <h4>Task</h4>
 <hr />
 <div class="row">
@@ -7,12 +8,12 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Task.Id" />
-            <div class="form-group">
+            <div class="form-group d-none">
                 <label asp-for="Task.EmployerId" class="control-label"></label>
                 <select asp-for="Task.EmployerId" class="form-control" asp-items="ViewBag.EmployerId"></select>
                 <span asp-validation-for="Task.EmployerId" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group d-none">
                 <label asp-for="Task.EmployeeId" class="control-label"></label>
                 <select asp-for="Task.EmployeeId" class="form-control" asp-items="ViewBag.EmployeeId"></select>
                 <span asp-validation-for="Task.EmployeeId" class="text-danger"></span>
@@ -37,22 +38,22 @@
                 <input asp-for="Task.Status" class="form-control" />
                 <span asp-validation-for="Task.Status" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group d-none">
                 <label asp-for="Task.EmployerReviewDescr" class="control-label"></label>
                 <input asp-for="Task.EmployerReviewDescr" class="form-control" />
                 <span asp-validation-for="Task.EmployerReviewDescr" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group d-none">
                 <label asp-for="Task.EmployeeReviewDescr" class="control-label"></label>
                 <input asp-for="Task.EmployeeReviewDescr" class="form-control" />
                 <span asp-validation-for="Task.EmployeeReviewDescr" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group d-none">
                 <label asp-for="Task.EmployerRating" class="control-label"></label>
                 <input asp-for="Task.EmployerRating" class="form-control" />
                 <span asp-validation-for="Task.EmployerRating" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group d-none">
                 <label asp-for="Task.EmployeeRating" class="control-label"></label>
                 <input asp-for="Task.EmployeeRating" class="form-control" />
                 <span asp-validation-for="Task.EmployeeRating" class="text-danger"></span>
