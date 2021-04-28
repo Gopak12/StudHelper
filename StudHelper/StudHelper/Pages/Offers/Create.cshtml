@@ -1,0 +1,46 @@
+﻿@page
+@model StudHelper.Pages.Offers.CreateModel
+
+<h4>Offer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Offer.Id" class="control-label"></label>
+                <input asp-for="Offer.Id" class="form-control" />
+                <span asp-validation-for="Offer.Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Offer.TaskId" class="control-label"></label>
+                <select asp-for="Offer.TaskId" class ="form-control" asp-items="ViewBag.TaskId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Offer.EmployeeId" class="control-label"></label>
+                <select asp-for="Offer.EmployeeId" class ="form-control" asp-items="ViewBag.EmployeeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Offer.Description" class="control-label"></label>
+                <input asp-for="Offer.Description" class="form-control" />
+                <span asp-validation-for="Offer.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Offer.ProposedPrice" class="control-label"></label>
+                <input asp-for="Offer.ProposedPrice" class="form-control" />
+                <span asp-validation-for="Offer.ProposedPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

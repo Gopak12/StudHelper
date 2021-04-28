@@ -1,0 +1,48 @@
+﻿@page
+@model StudHelper.Pages.Tasks.IndexModel
+
+<table class="table">
+    <thead>
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Task[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Task[0].MinPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Task[0].MaxPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Task[0].Employer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Task)
+        {
+            @if (item.Status == 0)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaxPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employer.UserName)
+                </td>
+                <td>
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
+            }
+        }
+    </tbody>
+</table>
