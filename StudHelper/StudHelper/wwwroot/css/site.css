@@ -58,10 +58,26 @@ html {
   min-height: 100%;
 }
 
+.header {
+    
+}
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
+.description {
+  display:flex;
+  margin-right: 40%;
+}
+
+.skills {
+    display: flex;
+    color: rgb(54, 146, 253);
+    text-decoration:none;
+}
+
+
 .footer {
   position: absolute;
   bottom: 0;
