@@ -32,7 +32,7 @@ namespace StudHelper.Pages.MyTasks
             Task = await _context.Tasks
                 .Include(t => t.Employee)
                 .Include(t => t.Employer).FirstOrDefaultAsync(m => m.Id == id);
-
+            Task.Offers = await _context.Offers.Where(o => o.TaskId == Task.Id).ToListAsync();
             if (Task == null)
             {
                 return NotFound();

@@ -36,6 +36,9 @@ namespace StudHelper.Pages.Offers
             {
                 return Page();
             }
+            var usr = _context.Users.Where(u => u.UserName == User.Identity.Name).FirstOrDefault();
+
+            Offer.EmployeeId = usr.Id;
 
             _context.Offers.Add(Offer);
             await _context.SaveChangesAsync();

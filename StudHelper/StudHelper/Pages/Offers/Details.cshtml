@@ -18,10 +18,10 @@
             @Html.DisplayFor(model => model.Offer.ProposedPrice)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Offer.Employee)
+            Employer
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Offer.Employee.Id)
+            @Html.DisplayFor(model => model.Offer.Task.Employer.UserName)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Offer.Task)

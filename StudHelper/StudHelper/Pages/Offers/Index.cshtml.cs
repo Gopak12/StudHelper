@@ -25,7 +25,7 @@ namespace StudHelper.Pages.Offers
         {
             Offer = await _context.Offers
                 .Include(o => o.Employee)
-                .Include(o => o.Task).ToListAsync();
+                .Include(o => o.Task).Where(u => u.Employee.UserName == User.Identity.Name).ToListAsync();
         }
     }
 }

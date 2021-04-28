@@ -35,7 +35,20 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Task.Employee.UserName)
         </dd>
-        
+        <dt class="col-sm-2">
+            Offers
+        </dt>   
+        <dd class="col-sm-10">
+            @foreach (var offer in Model.Task.Offers)
+            {
+                <h5>@Html.DisplayFor(mo => offer.Employee.UserName)</h5>
+                <strong>$@Html.DisplayFor(mo => offer.ProposedPrice)</strong>
+                <br />
+                <p>@Html.DisplayFor(mo => offer.Description)</p>
+
+                
+            }
+        </dd>
     </dl>
 </div>
 <div>

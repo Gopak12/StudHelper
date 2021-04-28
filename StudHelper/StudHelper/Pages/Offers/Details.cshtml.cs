@@ -31,7 +31,7 @@ namespace StudHelper.Pages.Offers
             Offer = await _context.Offers
                 .Include(o => o.Employee)
                 .Include(o => o.Task).FirstOrDefaultAsync(m => m.Id == id);
-
+            Offer.Task.Employer = _context.Users.Where(u => u.Id == Offer.Task.EmployerId).FirstOrDefault();
             if (Offer == null)
             {
                 return NotFound();
