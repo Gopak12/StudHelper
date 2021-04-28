@@ -317,5 +317,7 @@ namespace StudHelper.Data
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+        public DbSet<StudHelper.Models.AspNetUserRole> AspNetUserRole { get; set; }
     }
 }
