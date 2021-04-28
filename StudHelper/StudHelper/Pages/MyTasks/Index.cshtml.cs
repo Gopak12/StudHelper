@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using Task = StudHelper.Models.Task;
 
 namespace StudHelper.Pages.MyTasks
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly StudHelper.Data.StudHelperContext _context;
