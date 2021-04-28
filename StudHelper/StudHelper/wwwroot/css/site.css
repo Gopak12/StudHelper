@@ -77,6 +77,14 @@ body {
     text-decoration:none;
 }
 
+.skills&files {
+    display:flex;
+}
+
+.button {
+    color: rgb(54, 146, 253);
+    margin-left:23%;
+}
 
 .footer {
   position: absolute;
